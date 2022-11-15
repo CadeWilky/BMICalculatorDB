@@ -55,6 +55,8 @@ import { useState, useEffect } from "react";
       </View>
     );
   }
+
+ 
   
   export default function App() {
     const [weight, setWeight] = useState(null);
@@ -137,7 +139,7 @@ import { useState, useEffect } from "react";
   
             
             <Text style={styles.results}>{bmi ? 'Body Mass Index is ' + bmi : ''}</Text>
-            <Text style={styles.results}>{bmiStatus ? '(' + bmiStatus + ')' : ''}</Text>
+            <Text style={styles.bmiStatusResult}>{bmiStatus ? '(' + bmiStatus + ')' : ''}</Text>
             <Items></Items>
           </ScrollView>
         </SafeAreaView>
@@ -203,15 +205,19 @@ import { useState, useEffect } from "react";
       fontSize: 28,
       textAlign: 'center',
       marginTop: 20,
-      marginBottom: 100,
+    },
+    bmiStatusResult:{
+      fontSize: 28,
+      textAlign:'center',
+      marginBottom: 20
     },
     bmiHistory: {
-      fontSize: 18,
+      fontSize: 20,
       marginBottom: 8,
       right: 20,
     },
     bmiHistoryHeading: {
-      fontSize: 18,
+      fontSize: 24,
       marginBottom: 8,
     },
     sectionContainer: {
